@@ -14,3 +14,4 @@ private:
 	std::vector<std::vector<char>> g;
 	int w, h;
 };
+

@@ -27,3 +27,4 @@ void grid::print() {
 void grid::set(int x, int y, char c) {
 	g[x][y] = c;
 }
+
