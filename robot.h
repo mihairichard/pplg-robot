@@ -14,8 +14,9 @@ public:
 	robot(grid& g) : _grid(g), _orientation(right) {}
 	char char_for_orientation(orientation o);
 	void move(int x, int y);
-	void execute_cmd(char);
+	void execute(const std::string&);
 private:
+	void execute_cmd(char);
 	void execute_s();
 	void execute_l();
 	void execute_r();
