@@ -21,8 +21,8 @@ private:
 	void execute_l();
 	void execute_r();
 private:
+	grid& _grid;
 	orientation _orientation;
 	int x, y;
-	grid& _grid;
 };
 
