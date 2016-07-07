@@ -1,8 +1,9 @@
 #pragma once
 #include <vector>
 #include <string>
+#include "utils.h"
 
-class command_store
+class command_store : public non_copyable
 {
 public:
 	char consume_command();

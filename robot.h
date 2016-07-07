@@ -2,8 +2,9 @@
 
 #include "grid.h"
 #include "command_store.h"
+#include "utils.h"
 
-class robot
+class robot : public non_copyable
 {
 public:
 	enum orientation {

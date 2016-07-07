@@ -3,8 +3,9 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
+#include "utils.h"
 
-class grid
+class grid : public non_copyable
 {
 public:
 	grid(int w, int h);
