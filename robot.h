@@ -1,6 +1,7 @@
 #pragma once
 
 #include "grid.h"
+#include "command_store.h"
 
 class robot
 {
@@ -14,7 +15,7 @@ public:
 	robot(grid& g) : _grid(g), _orientation(right), x(0), y(0) {}
 	char char_for_orientation(orientation o);
 	void move(int x, int y);
-	void execute(const std::string&);
+	void execute(command_store& cs);
 private:
 	void execute_cmd(char);
 	void execute_s();

@@ -64,9 +64,9 @@ void robot::execute_r()
 	move(x, y); //trigger redraw
 }
 
-void robot::execute(const std::string& cmds)
+void robot::execute(command_store& cs)
 {
-	for (char c:cmds) {
-		execute_cmd(c);
+	while(cs.have_command()) {
+		execute_cmd(cs.consume_command());
 	}
 }
