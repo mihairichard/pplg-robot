@@ -12,8 +12,12 @@ int main()
 		command_store cs;
 		cs.read();
 		r.execute(cs);
+	} catch (const validator_exception& e){
+		std::cout << "Validation error:" << std::endl
+			<< e.what() << std::endl;
 	} catch (const std::exception& e) {
-		std::cout << e.what() << std::endl;
+		std::cout << "Generic error:" << std::endl
+			<< e.what() << std::endl;
 	}
 	return 0;
 }
