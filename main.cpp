@@ -1,7 +1,7 @@
 #include <iostream>
 #include "grid.h"
 #include "robot.h"
-#include "command_store.h"
+#include "reader.h"
 
 int main()
 {
@@ -9,7 +9,7 @@ int main()
 		grid g(10, 6);
 		robot r(g);
 		r.move(3, 3);
-		command_store cs;
+		reader cs;
 		cs.read();
 		r.execute(cs);
 	} catch (const validator_exception& e){

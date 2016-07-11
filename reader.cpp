@@ -1,17 +1,17 @@
-#include "command_store.h"
+#include "reader.h"
 #include <iostream>
 
-char command_store::consume_command()
+char reader::consume_command()
 {
 	return *_cmdit++;
 }
 
-bool command_store::have_command()
+bool reader::have_command()
 {
 	return _cmdit != _commands.end();
 }
 
-void command_store::read()
+void reader::read()
 {
 	char input[256];
 	std::cin.getline(input, 256);

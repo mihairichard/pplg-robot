@@ -3,7 +3,7 @@
 #include <string>
 #include "utils.h"
 
-class command_store : public non_copyable
+class reader : public non_copyable
 {
 public:
 	char consume_command();

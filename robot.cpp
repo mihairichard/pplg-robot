@@ -64,7 +64,7 @@ void robot::execute_r()
 	move(x, y); //trigger redraw
 }
 
-void robot::execute(command_store& cs)
+void robot::execute(reader& cs)
 {
 	while(cs.have_command()) {
 		execute_cmd(cs.consume_command());
